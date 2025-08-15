@@ -1,14 +1,14 @@
-# Brutalist Portfolio
+# Personal Portfolio
 
 <p align="center">
-  <img src="./public/demo.webp" alt="Brutalist Portfolio Banner" />
+  <img src="./public/demo.png" alt="Personal Portfolio Banner" />
 </p>
 
 A modern, responsive frontend application built with React, Vite, Tailwind CSS v4, and Shadcn/UI.
 
 ## Table of Contents
 
-- [Brutalist Portfolio](#brutalist-portfolio)
+- [Personal Portfolio](#personal-portfolio)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Tech Stack](#tech-stack)
