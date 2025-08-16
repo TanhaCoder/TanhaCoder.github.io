@@ -3,6 +3,7 @@ import profileImage from "../assets/pf.svg";
 import React from "react";
 import { FaArrowRightLong, FaDiscord, FaInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { SiPython } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
 import { motion, AnimatePresence } from "motion/react";
 import {
@@ -16,7 +17,7 @@ import {
   TbBrandUbuntu,
 } from "react-icons/tb";
 import { PiInstagramLogoFill } from "react-icons/pi";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiPython } from "react-icons/ri";
 
 const HomePage = () => {
   const iconsContainerVariants = {
@@ -132,63 +133,28 @@ const HomePage = () => {
                 />
               </div>
 
-              {/* Floating Icons - spread around */}
+              {/* Floating Icons */}
+              <div className="absolute top-1 left-16 animate-float-fast z-20 text-main ">
+                <SiPython size={28} />
+              </div>
               <motion.div
-                className="absolute top-10 left-4 animate-float-fast z-20 text-main"
-                animate={{ rotate: [0, 360], y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                className="absolute bottom-4 left-4 z-20"
+                animate={{
+                  rotate: [0, 360],
+                  y: [0, -20, 0],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 6,
+                  ease: "easeInOut",
+                }}
               >
-                <TbBrandOpenai size={28} />
+                <TbBrandReact size={28} />
               </motion.div>
-              <motion.div
-                className="absolute bottom-5 left-4 animate-float-fast z-20 text-main"
-                animate={{ rotate: [0, 360], y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              >
-                <TbBrandPython size={28} />
-              </motion.div>
-              <motion.div
-                className="absolute bottom-8 right-2 animate-float-fast z-20"
-                animate={{ rotate: [0, 360], y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              >
-                <TbBrandCpp size={28} />
-              </motion.div>
-              <motion.div
-                className="absolute bottom-75 left-34 animate-float-fast z-20"
-                animate={{ rotate: [0, 360], y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              >
-                <TbAi size={36} />
-              </motion.div>
-              <motion.div
-                className="absolute top-8 right-6 animate-float-fast z-20"
-                animate={{ rotate: [0, 360], y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              >
-                <TbBrandAws size={30} />
-              </motion.div>
-              <motion.div
-                className="absolute top-35 left-80 animate-float-fast z-20"
-                animate={{ rotate: [0, 360], y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              >
-                <TbBrandDjango size={26} />
-              </motion.div>
-              <motion.div
-                className="absolute top-82 right-35 animate-float-fast z-20"
-                animate={{ rotate: [0, 360], y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              >
-                <TbBrandMysql size={26} />
-              </motion.div>
-              <motion.div
-                className="absolute top-40 right-80 animate-float-fast z-20"
-                animate={{ rotate: [0, 360], y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              >
-                <TbBrandUbuntu size={26} />
-              </motion.div>
+
+              <div className="absolute bottom-8 right-2 animate-float z-20">
+                <RiPython size={28} />
+              </div>
             </div>
           </motion.div>
 
