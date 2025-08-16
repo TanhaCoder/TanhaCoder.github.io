@@ -3,21 +3,10 @@ import profileImage from "../assets/pf.svg";
 import React from "react";
 import { FaArrowRightLong, FaDiscord, FaInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
-import { SiPython } from "react-icons/si";
+import { SiPython, SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
 import { motion, AnimatePresence } from "motion/react";
-import {
-  TbBrandOpenai,
-  TbBrandPython,
-  TbBrandCpp,
-  TbAi,
-  TbBrandAws,
-  TbBrandDjango,
-  TbBrandMysql,
-  TbBrandUbuntu,
-} from "react-icons/tb";
 import { PiInstagramLogoFill } from "react-icons/pi";
-import { RiPython } from "react-icons/ri";
 
 const HomePage = () => {
   const iconsContainerVariants = {
@@ -153,7 +142,7 @@ const HomePage = () => {
               </motion.div>
 
               <div className="absolute bottom-8 right-2 animate-float z-20">
-                <RiPython size={28} />
+                <SiGithub size={28} />
               </div>
             </div>
           </motion.div>
