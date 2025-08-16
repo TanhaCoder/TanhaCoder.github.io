@@ -3,9 +3,10 @@ import profileImage from "../assets/pf.svg";
 import React from "react";
 import { FaArrowRightLong, FaDiscord, FaInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
-import { SiPython, SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
+import { SiGithub } from "react-icons/si";
 import { motion, AnimatePresence } from "motion/react";
+import { TbBrandPython, TbAi } from "react-icons/tb";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
 const HomePage = () => {
@@ -124,7 +125,7 @@ const HomePage = () => {
 
               {/* Floating Icons */}
               <div className="absolute top-1 left-16 animate-float-fast z-20 text-main ">
-                <SiPython size={28} />
+                <SiGithub size={28} />
               </div>
               <motion.div
                 className="absolute bottom-4 left-4 z-20"
@@ -138,11 +139,11 @@ const HomePage = () => {
                   ease: "easeInOut",
                 }}
               >
-                <TbBrandReact size={28} />
+                <TbBrandPython size={28} />
               </motion.div>
 
               <div className="absolute bottom-8 right-2 animate-float z-20">
-                <SiGithub size={28} />
+                <TbAi size={34} />
               </div>
             </div>
           </motion.div>
@@ -173,10 +174,8 @@ const HomePage = () => {
                 variants={paragraphItemVariants}
                 className="text-center md:text-left font-PublicSans max-w-md mt-4"
               >
-                I’m AI/ML engineer passionate about blending 
-                clean design with functional, user-friendly web applications. 
-                I love exploring new tech and crafting solutions that make an impact.
-
+                I am passionate about integrating functionality and design in
+                applications to create intuitive, user-friendly experiences.
               </motion.p>
             </motion.div>
 
@@ -187,22 +186,22 @@ const HomePage = () => {
               initial="hidden"
               animate="visible"
             >
-              <motion.div variants={buttonItemVariants} className="w-full cursor-pointer">
+              <motion.div variants={buttonItemVariants} className="w-full">
                 <Button
                   onClick={() =>
                     window.open("https://discord.com/users/weirdcountry", "_blank")
                   }
-                  className="w-full cursor-pointer"
+                  className="w-full"
                 >
                   Contact Me <FaArrowRightLong className="ml-2" />
                 </Button>
               </motion.div>
-              <motion.div variants={buttonItemVariants} className="w-full cursor-pointer">
+              <motion.div variants={buttonItemVariants} className="w-full">
                 <Button
                   onClick={() =>
-                    window.open("https://calendly.com/milopaws1000", "_blank")
+                    window.open("https://calendly.com/arbazw", "_blank")
                   }
-                  className="w-full cursor-pointer"
+                  className="w-full"
                 >
                   Schedule a Meeting <FaArrowRightLong className="ml-2" />
                 </Button>
