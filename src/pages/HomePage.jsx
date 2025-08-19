@@ -174,8 +174,8 @@ const HomePage = () => {
                 variants={paragraphItemVariants}
                 className="text-center md:text-left font-PublicSans max-w-md mt-4"
               >
-                I am passionate about integrating functionality and design in
-                applications to create intuitive, user-friendly experiences.
+                I am a Python Developer and AI/ML Engineer specializing in LLMs, 
+                NLP, computer vision, and generative AI to build cutting-edge applications.
               </motion.p>
             </motion.div>
 
@@ -199,7 +199,7 @@ const HomePage = () => {
               <motion.div variants={buttonItemVariants} className="w-full">
                 <Button
                   onClick={() =>
-                    window.open("https://calendly.com/arbazw", "_blank")
+                    window.open("https://calendly.com/arbazahmad", "_blank")
                   }
                   className="w-full"
                 >
@@ -264,11 +264,11 @@ const HomePage = () => {
             animate="visible" // Or use whileInView="visible" and viewport={{ once: true, amount: 0.2 }}
           >
             <motion.p variants={paragraphItemVariants} className="text-justify">
-              I'm a computer science student passionate about creating seamless,
-              user-friendly experiences through thoughtful design and efficient
-              code. I love working at the intersection of frontend and backend
-              development, ensuring that applications are not only aesthetically
-              pleasing but also robust and scalable.
+              Hi, I’m a Python Developer & AI/ML Engineer passionate about creating 
+              intelligent solutions that bridge technology with real-world impact. 
+              My core expertise lies in Artificial Intelligence, Machine Learning, 
+              and Full-Stack Development, with a strong focus on Natural Language 
+              Processing (NLP), Computer Vision, and Generative AI.
             </motion.p>
             <motion.p variants={paragraphItemVariants} className="text-justify">
               {/* Currently, I'm focused on expanding my skills in web development,
@@ -278,12 +278,12 @@ const HomePage = () => {
               frameworks. I enjoy tackling complex problems and finding elegant
               solutions that prioritize user experience while maintaining code
               quality. */}
-              Currently, I'm focused on growing my web development skills, with
-              a strong interest in React and Node.js. Through coursework and
-              personal projects, I've gained experience in UI/UX design,
-              responsive layouts, and modern JavaScript frameworks. I enjoy
-              solving complex problems with elegant, user-focused solutions that
-              maintain high code quality.
+              I work extensively with modern AI frameworks like TensorFlow, 
+              PyTorch, Hugging Face Transformers, and LangChain, building everything 
+              from LLM-powered applications to AI-driven automation tools. 
+              I’m particularly interested in multimodal AI systems, AI-powered 
+              personalization engines, and applying AI in domains like finance, 
+              healthcare, and cybersecurity to drive smarter decision-making.
             </motion.p>
             <motion.p variants={paragraphItemVariants} className="text-justify">
               {/* When I'm not coding, you'll find me exploring new technologies, or
@@ -291,9 +291,34 @@ const HomePage = () => {
               enjoy photography in my free time, playing video games, reading
               books, and occasionally traveling. I'm always looking for opportunities to
               collaborate on projects that can make a positive impact. */}
-              Outside of coding, I enjoy exploring new tech, learning online,
-              photography, gaming, reading, and occasional travel. I'm always
-              open to impactful collaborations.
+              As a developer, I combine Python, Django, Flask, and FastAPI 
+              with databases (PostgreSQL, MongoDB, MySQL) and cloud technologies 
+              (AWS, Serverless, Docker, CI/CD) to deliver scalable, production-ready 
+              applications. I also enjoy building APIs, automation workflows, and 
+              integrating LLMs into real-world products that simplify tasks and unlock creativity.
+            </motion.p>
+            <motion.p variants={paragraphItemVariants} className="text-justify">
+              {/* When I'm not coding, you'll find me exploring new technologies, or
+              expanding my knowledge through online courses. Beyond tech, I
+              enjoy photography in my free time, playing video games, reading
+              books, and occasionally traveling. I'm always looking for opportunities to
+              collaborate on projects that can make a positive impact. */}
+              Beyond development, I’m fascinated by the future of Generative AI, 
+              Large Language Models, and Ethical AI — ensuring technology grows 
+              responsibly while solving high-impact problems. I’m also keeping a 
+              close eye on how AI transforms industries like finance, cybersecurity, 
+              and education, and love contributing to projects at this intersection.
+            </motion.p>
+            <motion.p variants={paragraphItemVariants} className="text-justify">
+              {/* When I'm not coding, you'll find me exploring new technologies, or
+              expanding my knowledge through online courses. Beyond tech, I
+              enjoy photography in my free time, playing video games, reading
+              books, and occasionally traveling. I'm always looking for opportunities to
+              collaborate on projects that can make a positive impact. */}
+              If you’re looking for someone who can design, train, and deploy
+              AI-powered applications with precision and creativity, let’s 
+              connect. I’m always excited to collaborate on projects where 
+              cutting-edge AI meets real-world value.
             </motion.p>
           </motion.div>
         </div>
