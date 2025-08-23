@@ -9,6 +9,54 @@ import { motion, AnimatePresence } from "motion/react";
 import { TbBrandPython, TbAi } from "react-icons/tb";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
+const testimonials = [
+  {
+    quote:
+      "Arbaz is one of the most capable, quick, and thorough engineers on Upwork. He is a great communicator and delivers every time.",
+    client: "Client, MLM Bot Project",
+  },
+  {
+    quote:
+      "I would like to give a big shoutout to Ahmad for his outstanding work as a developer. His expertise and dedication have greatly contributed to our online application's success.",
+    client: "Client, Dental Note Application",
+  },
+  {
+    quote:
+      "Good skills, prompt response, high-quality work. Highly recommended!",
+    client: "Client, API Development Project",
+  },
+  {
+    quote:
+      "It was amazing working with him on the project. Highly Recommended!",
+    client: "Client, AI GPT-3 Project",
+  },
+  {
+    quote:
+      "Arbaz was very helpful, professional, and technically strong. Definitely recommend and hope to work together again.",
+    client: "Client, GPT-3 Consulting Project",
+  },
+  {
+    quote:
+      "Arbaz did a remarkable job building a connection with ChatGPT within Google Sheets for us. Thorough and detail-oriented!",
+    client: "Client, ChatGPT Integration",
+  },
+  {
+    quote:
+      "Ahmad is absolutely wonderful. Thorough and knowledgeable, very wonderful to work with.",
+    client: "Client, AI Text Tool Training",
+  },
+  {
+    quote:
+      "Mr. Ahmad is a talented AI developer. We collaborated on multiple AI projects. Highly recommended.",
+    client: "Client, Question Generation Platform",
+  },
+  {
+    quote:
+      "Arbaz Ahmad completed our AI model generation and UI task perfectly. On-time, communicative, and proactive.",
+    client: "Client, AI Project",
+  },
+];
+
 const HomePage = () => {
   const iconsContainerVariants = {
     hidden: { opacity: 0 },
@@ -174,8 +222,9 @@ const HomePage = () => {
                 variants={paragraphItemVariants}
                 className="text-center md:text-left font-PublicSans max-w-md mt-4"
               >
-                I am a Python Developer and AI/ML Engineer specializing in LLMs, 
-                NLP, computer vision, and generative AI to build cutting-edge applications.
+                I am a Python Developer and AI/ML Engineer specializing in LLMs,
+                NLP, computer vision, and generative AI to build cutting-edge
+                applications.
               </motion.p>
             </motion.div>
 
@@ -252,79 +301,135 @@ const HomePage = () => {
           <motion.h2
             initial={{ opacity: 0, y: +10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }} // Optional delay for heading
-            className="font-bold text-xl md:text-xl  mb-2"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-bold text-xl md:text-xl mb-2"
           >
             About Me
           </motion.h2>
           <motion.div
-            className="space-y-4 font-PublicSans text-gray-500 "
+            className="space-y-4 font-PublicSans text-main-foreground dark:text-foreground"
             variants={aboutMeContainerVariants}
             initial="hidden"
-            animate="visible" // Or use whileInView="visible" and viewport={{ once: true, amount: 0.2 }}
+            animate="visible"
           >
-            <motion.p variants={paragraphItemVariants} className="text-justify">
-              Hi, I’m a Python Developer & AI/ML Engineer passionate about creating 
-              intelligent solutions that bridge technology with real-world impact. 
-              My core expertise lies in Artificial Intelligence, Machine Learning, 
-              and Full-Stack Development, with a strong focus on Natural Language 
+            <motion.p variants={paragraphItemVariants} className="text-justify text-main-foreground dark:text-foreground">
+              Hi, I’m a Python Developer & AI/ML Engineer passionate about creating
+              intelligent solutions that bridge technology with real-world impact.
+              My core expertise lies in Artificial Intelligence, Machine Learning,
+              and Full-Stack Development, with a strong focus on Natural Language
               Processing (NLP), Computer Vision, and Generative AI.
             </motion.p>
-            <motion.p variants={paragraphItemVariants} className="text-justify">
-              {/* Currently, I'm focused on expanding my skills in web development,
-              with particular interest in React and Node.js. Through my
-              coursework and personal projects, I've gained experience in UI/UX
-              design principles, responsive layouts, and modern JavaScript
-              frameworks. I enjoy tackling complex problems and finding elegant
-              solutions that prioritize user experience while maintaining code
-              quality. */}
-              I work extensively with modern AI frameworks like TensorFlow, 
-              PyTorch, Hugging Face Transformers, and LangChain, building everything 
-              from LLM-powered applications to AI-driven automation tools. 
-              I’m particularly interested in multimodal AI systems, AI-powered 
-              personalization engines, and applying AI in domains like finance, 
+            <motion.p variants={paragraphItemVariants} className="text-justify text-main-foreground dark:text-foreground">
+              I work extensively with modern AI frameworks like TensorFlow,
+              PyTorch, Hugging Face Transformers, and LangChain, building everything
+              from LLM-powered applications to AI-driven automation tools.
+              I’m particularly interested in multimodal AI systems, AI-powered
+              personalization engines, and applying AI in domains like finance,
               healthcare, and cybersecurity to drive smarter decision-making.
             </motion.p>
-            <motion.p variants={paragraphItemVariants} className="text-justify">
-              {/* When I'm not coding, you'll find me exploring new technologies, or
-              expanding my knowledge through online courses. Beyond tech, I
-              enjoy photography in my free time, playing video games, reading
-              books, and occasionally traveling. I'm always looking for opportunities to
-              collaborate on projects that can make a positive impact. */}
-              As a developer, I combine Python, Django, Flask, and FastAPI 
-              with databases (PostgreSQL, MongoDB, MySQL) and cloud technologies 
-              (AWS, Serverless, Docker, CI/CD) to deliver scalable, production-ready 
-              applications. I also enjoy building APIs, automation workflows, and 
+            <motion.p variants={paragraphItemVariants} className="text-justify text-main-foreground dark:text-foreground">
+              As a developer, I combine Python, Django, Flask, and FastAPI
+              with databases (PostgreSQL, MongoDB, MySQL) and cloud technologies
+              (AWS, Serverless, Docker, CI/CD) to deliver scalable, production-ready
+              applications. I also enjoy building APIs, automation workflows, and
               integrating LLMs into real-world products that simplify tasks and unlock creativity.
             </motion.p>
-            <motion.p variants={paragraphItemVariants} className="text-justify">
-              {/* When I'm not coding, you'll find me exploring new technologies, or
-              expanding my knowledge through online courses. Beyond tech, I
-              enjoy photography in my free time, playing video games, reading
-              books, and occasionally traveling. I'm always looking for opportunities to
-              collaborate on projects that can make a positive impact. */}
-              Beyond development, I’m fascinated by the future of Generative AI, 
-              Large Language Models, and Ethical AI — ensuring technology grows 
-              responsibly while solving high-impact problems. I’m also keeping a 
-              close eye on how AI transforms industries like finance, cybersecurity, 
+            <motion.p variants={paragraphItemVariants} className="text-justify text-main-foreground dark:text-foreground">
+              Beyond development, I’m fascinated by the future of Generative AI,
+              Large Language Models, and Ethical AI — ensuring technology grows
+              responsibly while solving high-impact problems. I’m also keeping a
+              close eye on how AI transforms industries like finance, cybersecurity,
               and education, and love contributing to projects at this intersection.
             </motion.p>
-            <motion.p variants={paragraphItemVariants} className="text-justify">
-              {/* When I'm not coding, you'll find me exploring new technologies, or
-              expanding my knowledge through online courses. Beyond tech, I
-              enjoy photography in my free time, playing video games, reading
-              books, and occasionally traveling. I'm always looking for opportunities to
-              collaborate on projects that can make a positive impact. */}
+            <motion.p variants={paragraphItemVariants} className="text-justify text-main-foreground dark:text-foreground">
               If you’re looking for someone who can design, train, and deploy
-              AI-powered applications with precision and creativity, let’s 
-              connect. I’m always excited to collaborate on projects where 
+              AI-powered applications with precision and creativity, let’s
+              connect. I’m always excited to collaborate on projects where
               cutting-edge AI meets real-world value.
             </motion.p>
+          </motion.div>
+        </div>
+
+        {/* Client Testimonials Section */}
+        <div className="w-full mt-10 mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="font-bold text-xl md:text-2xl mb-6 text-center md:text-left"
+          >
+            Client Testimonials
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="mb-8 text-center md:text-left text-main-foreground dark:text-[#ece3ce]"
+          >
+            Hear what my clients say about working with me on Python, AI/ML and data science projects.
+          </motion.p>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.2 },
+              },
+            }}
+            initial="hidden"
+            animate="visible"
+          >
+            {testimonials.map((testimonial, idx) => (
+              <motion.div
+                key={idx}
+                variants={{
+                  hidden: { opacity: 0, y: 20, scale: 0.98 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    transition: { duration: 0.5, ease: "easeOut" },
+                  },
+                }}
+                whileHover={{
+                  scale: 1.04,
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+                }}
+                className="
+          bg-[#ece3ce]
+          border border-main-foreground
+          shadow-[0_4px_24px_rgba(0,0,0,0.12)]
+          rounded-xl
+          p-6
+          flex flex-col justify-between
+          min-h-[180px]
+          transition-all duration-200
+          hover:shadow-xl
+          cursor-pointer
+          text-main-foreground
+          dark:bg-[#151b14]
+          dark:text-[#ece3ce]
+          dark:border-[#739072]
+          font-semibold
+          text-base
+        "
+              >
+                <p className="mb-4 font-semibold text-base">
+                  &quot;{testimonial.quote}&quot;
+                </p>
+                <span className="text-sm font-semibold mt-auto opacity-80">
+                  — {testimonial.client}
+                </span>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
     </div>
   );
 };
+
+
 
 export default HomePage;

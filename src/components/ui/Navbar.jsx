@@ -55,7 +55,7 @@ const Navbar = () => {
 
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
+    // link.href = "/resume.pdf";
     link.setAttribute("download", "resume.pdf");
     link.style.display = "none";
     document.body.appendChild(link);
