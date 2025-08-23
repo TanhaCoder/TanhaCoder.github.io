@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import profileImage from "../assets/pf.svg";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { FaArrowRightLong, FaDiscord, FaInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -8,6 +8,13 @@ import { SiGithub } from "react-icons/si";
 import { motion, AnimatePresence } from "motion/react";
 import { TbBrandPython, TbAi } from "react-icons/tb";
 import { PiInstagramLogoFill } from "react-icons/pi";
+
+import datastax from "../assets/clients/datastax.svg";
+import octocom from "../assets/clients/octocom.svg";
+import paro from "../assets/clients/paro.svg";
+import Rappi from "../assets/clients/Rappi.svg";
+import rudderstack from "../assets/clients/rudderstack.svg";
+import wisestep from "../assets/clients/wisestep.svg";
 
 const testimonials = [
   {
@@ -56,6 +63,18 @@ const testimonials = [
     client: "Client, AI Project",
   },
 ];
+
+const clientLogos = [
+  datastax,
+  octocom,
+  paro,
+  Rappi,
+  rudderstack,
+  wisestep
+  // Add more SVG imports here
+];
+
+const SCROLL_SPEED = 0.9; // px per frame, adjust for smoothness
 
 const HomePage = () => {
   const iconsContainerVariants = {
@@ -146,6 +165,30 @@ const HomePage = () => {
       },
     },
   };
+
+  // Infinite carousel logic
+  const trackRef = useRef(null);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let frame;
+    let scrollLeft = 0;
+    const logoSetWidth = track.scrollWidth / 2;
+
+    function animate() {
+      scrollLeft += SCROLL_SPEED;
+      if (scrollLeft >= logoSetWidth) {
+        scrollLeft = 0;
+      }
+      track.style.transform = `translateX(-${scrollLeft}px)`;
+      frame = requestAnimationFrame(animate);
+    }
+
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -424,6 +467,40 @@ const HomePage = () => {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+
+        {/* Happy Clients Section */}
+        <div className="w-full mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="font-bold text-xl md:text-2xl mb-4 text-center md:text-left"
+          >
+            Happy Clients
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="mb-8 text-center md:text-left text-main-foreground dark:text-[#ece3ce]"
+          >
+            Trusted by innovative companies worldwide to deliver cutting-edge AI solutions
+          </motion.p>
+          <div className="client-carousel">
+            <div className="client-carousel-track" ref={trackRef}>
+              {/* Duplicate logos for seamless infinite scroll */}
+              {[...clientLogos, ...clientLogos].map((logo, idx) => (
+                <img
+                  key={idx}
+                  src={logo}
+                  alt="Client Logo"
+                  className="logo-client object-contain transition-all duration-200"
+                  draggable={false}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

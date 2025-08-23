@@ -109,3 +109,25 @@
   --font-base: "JetBrains Mono", monospace;
   --font-heading: "Roboto Mono", monospace;
 }
+
+.client-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.client-carousel-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  /* Remove animation here, we'll use JS for smoothness */
+}
+
+.logo-client {
+  filter: brightness(0) saturate(100%) invert(21%) sepia(10%) saturate(1126%) hue-rotate(61deg) brightness(90%) contrast(90%);
+  height: 2.25rem; /* h-9 */
+  width: auto;
+}
+.dark .logo-client {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(7%) saturate(1067%) hue-rotate(353deg) brightness(103%) contrast(101%);
+}
