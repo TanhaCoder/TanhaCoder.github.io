@@ -9,12 +9,16 @@ import { motion, AnimatePresence } from "motion/react";
 import { TbBrandPython, TbAi } from "react-icons/tb";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
-import datastax from "../assets/clients/datastax.svg";
-import octocom from "../assets/clients/octocom.svg";
 import paro from "../assets/clients/paro.svg";
 import Rappi from "../assets/clients/Rappi.svg";
 import rudderstack from "../assets/clients/rudderstack.svg";
 import wisestep from "../assets/clients/wisestep.svg";
+import octocom from "../assets/clients/octocom.svg";
+import bGPT from "../assets/clients/bGPT.svg";
+import skit from "../assets/clients/skit.svg";
+import botpenguin from "../assets/clients/botpenguin.svg";
+import vokarstep from "../assets/clients/vokarstep.svg";
+import Babblebots from "../assets/clients/Babblebots.svg";
 
 const testimonials = [
   {
@@ -65,12 +69,16 @@ const testimonials = [
 ];
 
 const clientLogos = [
-  datastax,
-  octocom,
   paro,
   Rappi,
   rudderstack,
-  wisestep
+  wisestep,
+  octocom,
+  bGPT,
+  skit,
+  botpenguin,
+  vokarstep,
+  Babblebots,
   // Add more SVG imports here
 ];
 
