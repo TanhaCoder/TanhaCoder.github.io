@@ -15,7 +15,7 @@ import rudderstack from "../assets/clients/rudderstack.svg";
 import wisestep from "../assets/clients/wisestep.svg";
 import octocom from "../assets/clients/octocom.svg";
 import bGPT from "../assets/clients/bGPT.svg";
-import skit from "../assets/clients/skit.svg";
+import skit from "../assets/clients/Skit.svg";
 import botpenguin from "../assets/clients/botpenguin.svg";
 import vokarstep from "../assets/clients/vokarstep.svg";
 import Babblebots from "../assets/clients/Babblebots.svg";
